@@ -1,0 +1,103 @@
+body{
+    margin:0;
+    padding:0;
+
+}
+
+.test{
+    width:100px;
+    height:100px;
+    background:orange;
+    border:solid black 2px;
+}
+.scene{
+    position:relative;
+    background:rgb(19, 19, 18);
+    width:100%;
+    height:100vh;
+    border:solid 1px black;
+    transform-style: preserve-3d;
+    perspective: 950px;
+    perspective-origin: 50% 30%;
+}
+.pyramid {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top:30%;
+    left: 40%;
+    transform-style: preserve-3d;
+   
+    animation: rotation 30s infinite linear;
+}
+@keyframes rotation {
+    to {
+        transform: rotateY(360deg);
+    }
+}
+.front-p {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(96, 247, 247, 0.637);
+    box-shadow: 0 0 20px inset rgb(4, 220, 248);
+    
+    transform: translateZ(74px) rotateX(30deg);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    
+}
+
+.back-p {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(96, 247, 247, 0.637);
+    box-shadow: 0 0 20px inset rgb(4, 220, 248);
+    
+    transform: translateZ(-74px) rotateX(-30deg);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+   
+}
+
+.left-p {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(96, 247, 247, 0.637);
+    box-shadow: 0 0 20px inset rgb(4, 220, 248);
+    
+    transform: translateX(-74px) rotateY(270deg) rotateX(30deg);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+   
+}
+
+.right-p {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(96, 247, 247, 0.637);
+    box-shadow: 0 0 20px inset rgb(4, 220, 248);
+    
+    transform: translateX(74px) rotateY(270deg) rotateX(-30deg);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    
+}
+
+.down-p {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(96, 247, 247, 0.637);
+    box-shadow: 0 0 20px inset rgb(4, 220, 248);
+    opacity: 0.9;
+    transform: translateY(129px) rotateX(-90deg);
+    
+}
+
+.p-shadow {
+    position: absolute;
+    right: 15%;
+    width: 295px;
+    height: 295px;
+    background: radial-gradient(rgb(114, 105, 105), transparent);
+}
